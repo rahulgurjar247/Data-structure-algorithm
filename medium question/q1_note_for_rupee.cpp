@@ -8,11 +8,10 @@ int main(){
 
     while(num!=0){
         int temp=100;
-        switch(temp){
+        switch(temp){                
             case (100) : cout << "100 rupee note:"<<num/100<<endl;
                     temp = 50;
                     num = num%100;
-                    // break;
             case (50) : cout << "50 rupee note:"<<num/50 <<endl;
                     temp = 20 ;
                     num = num%50;
@@ -24,6 +23,7 @@ int main(){
                     break;               
         }          
         break;          
+        
         
     }
 
