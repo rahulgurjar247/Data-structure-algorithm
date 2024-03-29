@@ -2,6 +2,7 @@
 using namespace std;
 
 int update(int a){
+    
     a-=4;
     return a;
 }
