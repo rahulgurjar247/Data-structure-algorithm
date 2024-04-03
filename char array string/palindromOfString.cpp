@@ -41,3 +41,7 @@ public:
         return true;
     }
 };
+
+function hellorahul(){
+    cout<<"hello rahul";
+}
