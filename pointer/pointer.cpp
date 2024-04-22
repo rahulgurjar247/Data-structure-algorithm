@@ -25,4 +25,7 @@ int main(){
     cout<<"value in ptr2:"<< *ptr2<<endl;
     cout<<"address of ptr2:"<< &ptr2<<endl<<endl;
     cout<<"value target by ptr2:"<< **ptr2<<endl;
+
+
+    
 }
