@@ -10,20 +10,20 @@ class node{
 int main() {
     node *head = new node;
     head->data = 5;
-    head->next = nullptr;
+    head->next = NULL;
 
     node *second = new node;
     second->data =10;
-    second->next = nullptr;
+    second->next = NULL;
     head->next = second;
 
     node *third = new node;
     third->data =15;
-    third->next = nullptr;
+    third->next = NULL;
     second->next = third;
 
     node *current = head;
-    while(current != nullptr){
+    while(current != NULL){
         cout << current->data << " ";
         current = current->next;
     }

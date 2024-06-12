@@ -7,20 +7,20 @@ class Node{
         int data;
         Node * next;
         Node(int val){
-            this->prev = nullptr;
+            this->prev = NULL;
             this->data = val;
-            this->next = nullptr;
+            this->next = NULL;
            }
 };
 
 void insertAt(Node * &head,Node *newnode){
-    if(head==nullptr){
+    if(head==NULL){
         head = newnode;
         return;
     }
     Node *curr = head;
-    Node *temp = nullptr;
-    while(curr->next != nullptr){
+    Node *temp = NULL;
+    while(curr->next != NULL){
         curr = curr->next;
     }
     curr->next = newnode;
@@ -29,7 +29,7 @@ void insertAt(Node * &head,Node *newnode){
 
 void print(Node *head) {
     Node *temp = head;
-    while (temp != nullptr) {
+    while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
@@ -37,7 +37,7 @@ void print(Node *head) {
 }
 
 int main() {
-    Node * head = nullptr;
+    Node * head = NULL;
 
     Node *first = new Node(1);
     Node *second = new Node(5);

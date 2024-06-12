@@ -10,7 +10,7 @@ public:
     node(int a)
     {
         this->data = a;
-        this->next = nullptr;
+        this->next = NULL;
     }
 };
 
@@ -20,7 +20,7 @@ void insert(node *num,node * &head){
 }
 int main()
 {
-    node *head = nullptr;
+    node *head = NULL;
     node *first = new node(5);
     node *second = new node(10);
     node *third = new node(15);
@@ -34,18 +34,18 @@ int main()
 
 
     node *current = head;
-    while(current != nullptr){
+    while(current != NULL){
         cout << current->data << " ";
         current = current->next;
     }
 
     node* temp;
-    while (current != nullptr) {
+    while (current != NULL) {
         temp = current->next;
         delete current;
         current = temp;
     }
-    head = nullptr; 
+    head = NULL; 
 
 
 }

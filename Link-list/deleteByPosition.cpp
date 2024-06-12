@@ -9,17 +9,17 @@ public:
 
     Node(int data) {
         this->data = data;
-        this->next = nullptr;
+        this->next = NULL;
     }
 };
 
 void insert(Node*& head, Node *newNode) {
-    if (head == nullptr) {
+    if (head == NULL) {
         head = newNode;
         return;
     }
     Node *curr = head;
-    while (curr->next != nullptr) {
+    while (curr->next != NULL) {
         curr = curr->next;
     }
     curr->next = newNode;
@@ -27,7 +27,7 @@ void insert(Node*& head, Node *newNode) {
 
 void print(Node*& head) {
     Node *temp = head;
-    while (temp != nullptr) {
+    while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
@@ -35,7 +35,7 @@ void print(Node*& head) {
 }
 
 void deleteAt(Node*& head, int pos) {
-    if (head == nullptr) {
+    if (head == NULL) {
         cout << "empty linked list\n";
         return;
     }
@@ -48,16 +48,16 @@ void deleteAt(Node*& head, int pos) {
     }
 
     Node *current = head;
-    Node *previous = nullptr;
+    Node *previous = NULL;
     int count = 1;
 
-    while (current != nullptr && count < pos) {
+    while (current != NULL && count < pos) {
         previous = current;
         current = current->next;
         count++;
     }
 
-    if (current == nullptr) {
+    if (current == NULL) {
         cout << "position out of range\n";
         return;
     }
@@ -67,7 +67,7 @@ void deleteAt(Node*& head, int pos) {
 }
 
 void cleanup(Node*& head) {
-    while (head != nullptr) {
+    while (head != NULL) {
         Node *temp = head;
         head = head->next;
         delete temp;
@@ -75,7 +75,7 @@ void cleanup(Node*& head) {
 }
 
 int main() {
-    Node *head = nullptr;
+    Node *head = NULL;
     Node *f = new Node(10);
     Node *s = new Node(20);
     Node *t = new Node(30);

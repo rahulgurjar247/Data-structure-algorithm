@@ -6,18 +6,18 @@ class Node{
         Node * next;
         Node(int val){
             this->data = val;
-            this->next = nullptr;
+            this->next = NULL;
            }
 };
 
 void insert(Node * &head,Node * newnode){
-    if(head==nullptr){
+    if(head==NULL){
         head= newnode;
         return;
     }
 
     Node *curr = head;
-    while(curr->next != nullptr){
+    while(curr->next != NULL){
         curr = curr->next;
     }
     curr->next = newnode;
@@ -25,7 +25,7 @@ void insert(Node * &head,Node * newnode){
 
 void print(Node * &head){
     Node *temp = head;
-    while (temp!= nullptr){
+    while (temp!= NULL){
         cout << temp->data<<" ";
         temp = temp->next;
     }
@@ -36,20 +36,20 @@ void deleteByValue(Node * &head,int val){
     if(head->data == val){
         Node *temp = head;
         head = head->next;
-        temp->next = nullptr;
+        temp->next = NULL;
         delete temp;
         return;
     }
     {
 
         Node *curr = head;
-        Node* prew = nullptr;        
-        while (curr->data != val && curr != nullptr){
+        Node* prew = NULL;        
+        while (curr->data != val && curr != NULL){
             prew = curr;
             curr = curr->next;            
         }
 
-        if(curr == nullptr){
+        if(curr == NULL){
             cout << "empty list";
         }
 
@@ -59,7 +59,7 @@ void deleteByValue(Node * &head,int val){
 }   
 
 int main() {
-    Node * head = nullptr;
+    Node * head = NULL;
     Node * first = new Node(5);
     Node * second = new Node(10);
     Node * third = new Node(15);

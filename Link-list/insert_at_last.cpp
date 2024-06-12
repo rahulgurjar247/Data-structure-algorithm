@@ -10,17 +10,17 @@ public:
     Node(int num)
     {
         data = num;
-        next = nullptr;
+        next = NULL;
     }
 };
 
 void insertatlast(Node* &head, Node* n){
-    if(head ==nullptr){
+    if(head ==NULL){
         head = n;
         return;
     }
     Node *curr = head;
-    while(curr->next !=nullptr){
+    while(curr->next !=NULL){
         curr = curr->next;
     }
 
@@ -29,7 +29,7 @@ void insertatlast(Node* &head, Node* n){
 
 int main()
 {
-    Node *head = nullptr;
+    Node *head = NULL;
     Node *first = new Node(15);
     Node *sec = new Node(145);
     Node *third = new Node(15);
@@ -45,19 +45,19 @@ int main()
     insertatlast(head, six);
 
     Node *current = head;
-    while (current != nullptr){
+    while (current != NULL){
         cout << current->data<<" ";
         current = current->next;
     }
 
     current = head;
     Node* temp;
-        while (current != nullptr) {
+        while (current != NULL) {
             temp = current->next;
             delete current;
             current = temp;
         }
-    head == nullptr;
+    head == NULL;
 
     return 0;
 }

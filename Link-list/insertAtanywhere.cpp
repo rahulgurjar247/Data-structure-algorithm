@@ -7,17 +7,17 @@ class Node{
     Node *next;
     Node(int val){
         data = val;
-        next = nullptr;
+        next = NULL;
     }
 };
 
 void insert(Node* &head,Node *newNode){
-    if(head == nullptr){
+    if(head == NULL){
         head = newNode;
         return;
     }
     Node * curr = head;
-    while(curr->next != nullptr){
+    while(curr->next != NULL){
         curr = curr->next;
     }
     curr->next = newNode;
@@ -25,7 +25,7 @@ void insert(Node* &head,Node *newNode){
 
 void insertAt(Node * &head,Node * num,int data) {
     Node *temp = head;
-    while(temp->data != data && temp->next != nullptr){
+    while(temp->data != data && temp->next != NULL){
         temp = temp->next;
     }
     num->next = temp->next;
@@ -33,7 +33,7 @@ void insertAt(Node * &head,Node * num,int data) {
 }
 
 int main() {
-    Node *head = nullptr;
+    Node *head = NULL;
 
     Node *first = new Node(5);
     Node *sec = new Node(6);
@@ -55,20 +55,20 @@ int main() {
 
 
     Node *current = head;
-    while(current != nullptr){
+    while(current != NULL){
         cout << current->data<<" ";
         current = current->next;
     }
 
     current = head;
     Node *temp;
-    while (current != nullptr )
+    while (current != NULL )
     {
         temp = current->next;
         delete current;
         current = temp;
     }
-    head == nullptr;
+    head == NULL;
 
     return 0 ;
 }
