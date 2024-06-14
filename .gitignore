@@ -3,3 +3,4 @@ output
 helloworld.exe
 *.exe
 imghero.jpg
+/Stack/stack_usingLinklist.cpp
