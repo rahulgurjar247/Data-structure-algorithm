@@ -58,6 +58,18 @@ void deleteByValue(Node * &head,int val){
         }
 }   
 
+void ReverseLL(Node * &head){
+    Node* curr = head;
+    Node* prew = NULL;
+    Node *forward;
+    while(curr!=NULL){
+        forward = curr->next;
+        curr->next = prew;
+        prew = curr;
+        curr = forward;
+    }
+    head = prew;
+}
 int main() {
     Node * head = NULL;
     Node * first = new Node(5);
@@ -74,12 +86,8 @@ int main() {
 
     print(head);
 
-    deleteByValue(head, 10);
+    ReverseLL(head);
+
     print(head);
-    deleteByValue(head, 20);
-    print(head);
-
-
-
     return 0;
 }
