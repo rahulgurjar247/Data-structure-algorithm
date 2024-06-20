@@ -13,7 +13,7 @@
 
 # bro hear is all program i made and work on it;
 
-<table style="width:80vw; border:1px solid; text-align:center; ">
+<table style="width:100%; border:1px solid; text-align:center; ">
 <tr >
  <th style="text-align:center;color:black;background-color:white;font-size:1.2rem;" colspan="2">Link List Question</th>
 </tr>
