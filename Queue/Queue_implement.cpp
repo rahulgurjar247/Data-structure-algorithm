@@ -68,7 +68,7 @@ class queue{
 };
 
 int main(){
-    queue delta(10);
+    queue delta(2);
     delta.push(1);
     delta.push(2);
     delta.push(3);
